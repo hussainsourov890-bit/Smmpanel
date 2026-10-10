@@ -1,0 +1,27 @@
+/* SIB SMM PANEL — ডিজাইন (রং বদলাতে :root এর ভ্যালু চেঞ্জ করুন) */
+:root{--bg:#10142b;--card:#181d3c;--line:#272d57;--tx:#e9ecff;--mut:#98a0cf;--a:#ffb020;--b:#38e0c8;--r:14px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.5 "Segoe UI",system-ui,sans-serif}
+a{color:var(--b);text-decoration:none}h1,h2,h3{margin:0 0 12px}
+.app{display:flex;min-height:100vh}aside{width:230px;background:#0b0e20;padding:20px 14px;display:flex;flex-direction:column;gap:6px;position:sticky;top:0;height:100vh}
+.logo{font-size:22px;padding:6px 10px 18px;letter-spacing:1px}.logo b{color:var(--a)}
+aside nav{display:flex;flex-direction:column;gap:4px;flex:1}aside nav a,.out{padding:10px 12px;border-radius:10px;color:var(--mut)}
+aside nav a.on,aside nav a:hover{background:var(--card);color:var(--tx);box-shadow:inset 3px 0 var(--a)}.out{color:#ff7b8a}
+main{flex:1;min-width:0}header{display:flex;align-items:center;gap:12px;padding:16px 24px;border-bottom:1px solid var(--line)}header h1{margin:0;font-size:20px;flex:1}
+header button{display:none;background:var(--card);color:var(--tx);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+.bal{background:var(--card);border:1px solid var(--line);padding:6px 14px;border-radius:99px;color:var(--a)}
+section{padding:24px;max-width:1100px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px;margin-bottom:18px;overflow-x:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:18px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px}.stat small{color:var(--mut)}.stat b{display:block;font-size:26px;color:var(--a)}
+label{display:block;margin:12px 0 4px;color:var(--mut);font-size:13px}
+input,select,textarea{width:100%;padding:11px 12px;background:#0d1127;color:var(--tx);border:1px solid var(--line);border-radius:10px;font:inherit}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--b);border-color:transparent}
+button.btn,.btn{display:inline-block;margin-top:14px;padding:11px 20px;background:var(--a);color:#1b1300;border:0;border-radius:10px;font-weight:700;cursor:pointer}
+.btn.sm{padding:5px 10px;margin:0;font-size:13px}.btn.red{background:#ff5d73;color:#fff}.btn.gh{background:transparent;color:var(--b);border:1px solid var(--b)}
+table{width:100%;border-collapse:collapse;min-width:560px}th,td{text-align:left;padding:10px;border-bottom:1px solid var(--line);vertical-align:middle}th{color:var(--mut);font-weight:600;font-size:13px}
+.tag{padding:2px 10px;border-radius:99px;background:#2a3166;font-size:12px}.Completed{background:#0f5c4d}.Canceled,.Rejected{background:#6b2434}.Processing{background:#6b4d0b}
+.msg{padding:10px 14px;border-radius:10px;background:#143f3a;margin-bottom:14px}.msg.err{background:#4a1e2a}.row{display:flex;gap:10px;flex-wrap:wrap}.row>*{flex:1;min-width:140px}
+.land{max-width:960px;margin:0 auto;padding:40px 20px}.hero{padding:50px 0 30px}.hero h1{font-size:clamp(34px,7vw,64px);line-height:1.05}.hero h1 b{color:var(--a)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}.notice{border-left:4px solid var(--a)}pre{white-space:pre-wrap;color:var(--mut)}
+@media(max-width:800px){aside{position:fixed;left:-250px;z-index:9;transition:.2s}aside.open{left:0}header button{display:block}.two{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
